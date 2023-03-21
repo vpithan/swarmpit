@@ -401,7 +401,8 @@
                  #?@(:clj [:handler handler/configs]))
       :post    (array-map
                  :summary "Create config"
-                 :parameters {:header {:authorization string?}
+                 :parameters {:header {:authorization string?
+                                       :content-type :json}
                               :body   spec/config-create}
                  :responses {201 {:body        {:id string?}
                                   :description "Success"}}
